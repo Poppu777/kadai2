@@ -3,12 +3,22 @@
 class Turn
 {
 	int t = (int)time(nullptr);
-	int Atk = t % 21;
+	int Player_Atk = t % 21;
+
 	while (true)
 	{
-		if (Slime < 0)
+		if (Slime_HP <= 0)
 		{
 			delete Slime;
+		}
+		else if(Goblin_HP <= 0)
+		{
+			delete Goblin;
+
+		}
+		else if(Player_HP <= 0)
+		{
+			delete Player_HP;
 		}
 
 		cunt++;
